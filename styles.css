@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #f7f6f2;
+    color: #444;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,18 +16,18 @@ body {
 }
 
 .main-container {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
     text-align: center;
-    max-width: 600px;
+    max-width: 700px;
     width: 90%;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    color: #ff6f61;
+    font-size: 2.2rem;
+    color: #6d9dc5;
     margin-bottom: 1rem;
 }
 
@@ -35,12 +35,13 @@ header p {
     font-size: 1.2rem;
     font-weight: 300;
     margin-bottom: 2rem;
+    color: #6d6d6d;
 }
 
 .assignments h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    color: #333;
+    color: #5e7b84;
 }
 
 .assignments ul {
@@ -49,22 +50,22 @@ header p {
 }
 
 .assignments li {
-    margin: 0.5rem 0;
+    margin: 0.7rem 0;
 }
 
 .assignments a {
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.2rem;
-    color: #ff6f61;
-    border: 2px solid #ff6f61;
+    font-size: 1.1rem;
+    color: #5c9ead;
+    border: 2px solid #5c9ead;
     padding: 0.5rem 1.5rem;
     border-radius: 25px;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .assignments a:hover {
-    background-color: #ff6f61;
+    background-color: #5c9ead;
     color: white;
 }
 
@@ -73,16 +74,16 @@ footer {
 }
 
 footer p {
-    font-size: 1rem;
-    color: #777;
+    font-size: 0.9rem;
+    color: #999;
     margin-bottom: 1rem;
 }
 
 footer button {
-    background-color: #ff6f61;
+    background-color: #5c9ead;
     border: none;
     color: white;
-    padding: 0.7rem 1.2rem;
+    padding: 0.7rem 1.5rem;
     border-radius: 25px;
     cursor: pointer;
     font-size: 1rem;
@@ -90,9 +91,7 @@ footer button {
 }
 
 footer button:hover {
-    background-color: #333;
-    color: #ff6f61;
-    border: 2px solid #ff6f61;
+    background-color: #4a8c96;
 }
 
 .dark-mode {
@@ -102,15 +101,14 @@ footer button:hover {
 
 .dark-mode .main-container {
     background-color: #444;
-    color: white;
 }
 
 .dark-mode a {
-    color: #ff6f61;
-    border-color: #ff6f61;
+    color: #a8e1e9;
+    border-color: #a8e1e9;
 }
 
 .dark-mode a:hover {
-    background-color: #ff6f61;
-    color: white;
+    background-color: #a8e1e9;
+    color: #333;
 }
