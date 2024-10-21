@@ -5,30 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My IWT Lab Assignments</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Personal Website</h1>
-        <p>Here you can find all my previous IWT lab assignments.</p>
+        <div class="container">
+            <h1>Welcome to My Personal Website</h1>
+            <p>Here you can find all my previous IWT lab assignments. Explore and enjoy!</p>
+        </div>
     </header>
 
-    <section>
-        <h2>Assignments</h2>
-        <ul>
-            <li><a href="labs/lab1/lab1.html">Lab1</a></li>
-            <li><a href="labs/lab2/lab2.html">Lab2</a></li>
-            <li><a href="labs/lab3/lab3.html">Lab3</a></li>
-            <li><a href="labs/lab4/index.html">Lab4</a></li>
-            <li><a href="labs/lab5/lab5.html">Lab5</a></li>
-            <li><a href="labs/lab6/lab6.html">Lab6</a></li>
-            <li><a href="labs/lab7/lab7.html">Lab7</a></li>
-            <li><a href="labs/lab8/lab8.html">Lab8(1)</a></li>
-            <li><a href="labs/lab8/lab8_s.html">Lab8(2)</a></li>
-        </ul>
+    <section class="assignments">
+        <div class="container">
+            <h2>Assignments</h2>
+            <ul>
+                <li><a href="labs/lab1/lab1.html">Lab1</a></li>
+                <li><a href="labs/lab2/lab2.html">Lab2</a></li>
+                <li><a href="labs/lab3/lab3.html">Lab3</a></li>
+                <li><a href="labs/lab4/index.html">Lab4</a></li>
+                <li><a href="labs/lab5/lab5.html">Lab5</a></li>
+                <li><a href="labs/lab6/lab6.html">Lab6</a></li>
+                <li><a href="labs/lab7/lab7.html">Lab7</a></li>
+                <li><a href="labs/lab8/lab8.html">Lab8(1)</a></li>
+                <li><a href="labs/lab8/lab8_s.html">Lab8(2)</a></li>
+            </ul>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Koyel Kalita</p>
+        <div class="container">
+            <p>&copy; 2024 Koyel Kalita. All Rights Reserved.</p>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
     </footer>
 
     <script>
@@ -36,15 +44,5 @@
             document.body.classList.toggle('dark-mode');
         }
     </script>
-    
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-    
-    <style>
-        .dark-mode {
-            background-color: #333;
-            color: white;
-        }
-    </style>
-
 </body>
 </html>
