@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art and Paintings Quiz</title>
+  <link rel="icon" type="image/jpeg" href="art-icon.jpg">
+  <style>
+    body {
+      background-color: #FAF3E0;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #E4DED7;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      font-size: 32px;
+      color: #3D2C29;
+      font-family: 'Palatino', serif;
+    }
+
+    .header h3 {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .question {
+      font-size: 18px;
+      font-weight: bold;
+      color: #4A3E37;
+      background-color: #E6E6FA;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .option {
+      background-color: #F0EFE9;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: #e6e6e6;
+      border-radius: 50%;
+    }
+
+    .container:hover input ~ .checkmark {
+      background-color: #d3d3d3;
+    }
+
+    .container input:checked ~ .checkmark {
+      background-color: #5A9F8E;
+    }
+
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    .container .checkmark:after {
+      left: 7px;
+      top: 3px;
+      width: 6px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+      margin-top: 40px;
+    }
+
+    #submit-btn {
+      background-color: #5A9F8E;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #submit-btn:hover {
+      background-color: #4F897B;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Art and Paintings Quiz</h1>
+    <h3>Test your knowledge about famous artworks and artists!</h3>
+  </div>
+
+  <form id="quiz-form">
+    <p class="question">Q1. Who painted the famous artwork "Starry Night"?</p>
+    <div class="option">
+      <label class="container">Vincent van Gogh
+        <input type="radio" name="q1" value="correct">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Pablo Picasso
+        <input type="radio" name="q1" value="incorrect">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Claude Monet
+        <input type="radio" name="q1" value="incorrect">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Leonardo da Vinci
+        <input type="radio" name="q1" value="incorrect">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+
+    <p class="question">Q2. The "Mona Lisa" is housed in which famous museum?</p>
+    <div class="option">
+      <label class="container">The Louvre
+        <input type="radio" name="q2" value="correct">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">The British Museum
+        <input type="radio" name="q2" value="incorrect">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">The Prado Museum
+        <input type="radio" name="q2" value="incorrect">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">The Metropolitan Museum of Art
+        <input type="radio" name="q2" value="incorrect">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <p class="question">Q3. Which art movement is Salvador Dalí associated with?</p>
+  <div class="option">
+    <label class="container">Impressionism
+      <input type="radio" name="q3" checked="checked">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Surrealism
+      <input type="radio" name="q3">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Cubism
+      <input type="radio" name="q3">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Baroque
+      <input type="radio" name="q3">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+
+  <p class="question">Q4. What year was Pablo Picasso's "Guernica" painted?</p>
+  <div class="option">
+    <label class="container">1910
+      <input type="radio" name="q4" checked="checked">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">1937
+      <input type="radio" name="q4">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">1925
+      <input type="radio" name="q4">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">1942
+      <input type="radio" name="q4">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+
+  <p class="question">Q5. Which of these painters is known for their "Water Lilies" series?</p>
+  <div class="option">
+    <label class="container">Paul Cézanne
+      <input type="radio" name="q5" checked="checked">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Claude Monet
+      <input type="radio" name="q5">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Edgar Degas
+      <input type="radio" name="q5">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Édouard Manet
+      <input type="radio" name="q5">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+
+  <p class="question">Q6. Who painted "The Persistence of Memory" with the iconic melting clocks?</p>
+  <div class="option">
+    <label class="container">Salvador Dalí
+      <input type="radio" name="q6" checked="checked">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Henri Matisse
+      <input type="radio" name="q6">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Pablo Picasso
+      <input type="radio" name="q6">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">René Magritte
+      <input type="radio" name="q6">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+
+  <p class="question">Q7. "The Last Supper" was painted by which Renaissance artist?</p>
+  <div class="option">
+    <label class="container">Leonardo da Vinci
+      <input type="radio" name="q7" checked="checked">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Michelangelo
+      <input type="radio" name="q7">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Raphael
+      <input type="radio" name="q7">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Donatello
+      <input type="radio" name="q7">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+
+  <p class="question">Q8. Which artist is famous for his colorful, abstract paintings, especially "Broadway Boogie Woogie"?</p>
+  <div class="option">
+    <label class="container">Piet Mondrian
+      <input type="radio" name="q8" checked="checked">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Wassily Kandinsky
+      <input type="radio" name="q8">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Kazimir Malevich
+      <input type="radio" name="q8">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Paul Klee
+      <input type="radio" name="q8">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+
+  <p class="question">Q9. The famous artwork "The Scream" was created by which Norwegian artist?</p>
+  <div class="option">
+    <label class="container">Edvard Munch
+      <input type="radio" name="q9" checked="checked">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Gustav Klimt
+      <input type="radio" name="q9">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Egon Schiele
+      <input type="radio" name="q9">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Francis Bacon
+      <input type="radio" name="q9">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+
+  <p class="question">Q10. Which artist is best known for the painting "The Night Watch"?</p>
+  <div class="option">
+    <label class="container">Rembrandt van Rijn
+      <input type="radio" name="q10" checked="checked">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Johannes Vermeer
+      <input type="radio" name="q10">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Peter Paul Rubens
+      <input type="radio" name="q10">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Anthony van Dyck
+      <input type="radio" name="q10">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+
+
+    <div class="footer">
+      <button type="button" id="submit-btn" onclick="checkResults()">Submit Quiz</button>
+      <p id="result"></p>
+    </div>
+  </form>
+
+  <script>
+    function checkResults() {
+      let score = 0;
+      const totalQuestions = 10; 
+      const form = document.forms['quiz-form'];
+
+      for (let i = 1; i <= totalQuestions; i++) {
+        const answer = form['q' + i].value;
+        if (answer === 'correct') {
+          score++;
+        }
+      }
+
+      const resultText = `You scored ${score} out of ${totalQuestions}`;
+      document.getElementById('result').innerText = resultText;
+
+
+      alert(resultText);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+Index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assignment-4 linking webpages</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Assignment 4</h1>
+<p>Open Lab-3</p>
+<a href="lab3.html" target="_blank" class="link-button">Assignment-3</a>
+
+<p>Click the areas on the GNU image to view description</p>
+
+<img src="gnu-logo.jpg" alt="GNU Logo" usemap="#work" class="image">
+<map name="work">
+<area shape="rect" coords="10,10,150,150" href="description1.html" alt="GNU Head"
+title="GNU Head">
+<area shape="circle" coords="300,250,60" href="description2.html" alt="GNU Body" title="GNU
+Body">
+</map>
+</body>
+
+</html>
+
+Description1.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GNU Head</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Description of GNU Head</h1>
+<p>The GNU head represents the free software movement. It symbolizes the freedom and
+collaborative spirit of open-source projects.</p>
+<a href="index.html" class="link-button">Back to Main Page</a>
+</body>
+</html>
+
+Styles.css
+body {
+font-family: Arial, sans-serif;
+background-color: #f9f9f9;
+margin: 0;
+padding: 0;
+text-align: center;
+}
+
+h1 {
+color: #333;
+margin-top: 20px;
+
+}
+
+.link-button {
+display: inline-block;
+margin: 20px;
+padding: 10px 20px;
+background-color: #007bff;
+color: white;
+text-decoration: none;
+border-radius: 5px;
+font-weight: bold;
+}
+
+.link-button:hover {
+background-color: #0056b3;
+}
+
+.image {
+margin: 20px;
+max-width: 80%;
+height: auto;
+border: 2px solid #007bff;
+}
+
+p {
+color: #555;
+font-size: 1.2em;
+line-height: 1.6em;
+margin: 20px auto;
+max-width: 800px;
+}
